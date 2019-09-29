@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MOK-AF-XAz">
-                                <rect key="frame" x="0.0" y="80" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="315"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Flight:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-Le-7mQ">
                                 <rect key="frame" x="20" y="420" width="115" height="36"/>
@@ -55,38 +55,54 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-xP-mIz">
-                                <rect key="frame" x="352" y="466" width="42" height="21"/>
+                                <rect key="frame" x="352" y="465" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI7-EY-46U">
-                                <rect key="frame" x="20" y="513" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI7-EY-46U">
+                                <rect key="frame" x="20" y="513" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2X-L9-2af">
+                                <rect key="frame" x="20" y="815" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.68235294120000001" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="I'm interested">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openOffer:" destination="S4R-Ja-viH" eventType="touchUpInside" id="a1L-uv-Cgc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UI7-EY-46U" firstAttribute="top" secondItem="0gv-FP-bMW" secondAttribute="bottom" constant="27" id="5Fv-KS-ybd"/>
                             <constraint firstItem="UI7-EY-46U" firstAttribute="leading" secondItem="K9I-jD-KjA" secondAttribute="leading" constant="20" id="5xC-s6-sp0"/>
                             <constraint firstItem="K9I-jD-KjA" firstAttribute="trailing" secondItem="MOK-AF-XAz" secondAttribute="trailing" id="6lO-Zy-meE"/>
+                            <constraint firstItem="K9I-jD-KjA" firstAttribute="trailing" secondItem="M2X-L9-2af" secondAttribute="trailing" constant="20" id="85N-gB-4Rx"/>
+                            <constraint firstItem="M2X-L9-2af" firstAttribute="leading" secondItem="K9I-jD-KjA" secondAttribute="leading" constant="20" id="8hI-xm-K8a"/>
                             <constraint firstItem="cF2-Le-7mQ" firstAttribute="top" secondItem="MOK-AF-XAz" secondAttribute="bottom" constant="40" id="8oZ-Jw-wZd"/>
+                            <constraint firstItem="K9I-jD-KjA" firstAttribute="trailing" secondItem="UI7-EY-46U" secondAttribute="trailing" constant="20" id="9JW-9E-b7i"/>
                             <constraint firstItem="K9I-jD-KjA" firstAttribute="trailing" secondItem="6T0-xP-mIz" secondAttribute="trailing" constant="20" id="9Qv-43-aYk"/>
                             <constraint firstItem="K9I-jD-KjA" firstAttribute="trailing" secondItem="KV7-iq-cy2" secondAttribute="trailing" constant="20" id="BFY-yk-0TP"/>
                             <constraint firstItem="MOK-AF-XAz" firstAttribute="leading" secondItem="K9I-jD-KjA" secondAttribute="leading" id="K1v-iY-iVZ"/>
                             <constraint firstItem="MOK-AF-XAz" firstAttribute="top" secondItem="K9I-jD-KjA" secondAttribute="top" constant="20" id="MHj-6j-let"/>
+                            <constraint firstItem="M2X-L9-2af" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UI7-EY-46U" secondAttribute="bottom" constant="20" id="OKz-zZ-hQl"/>
                             <constraint firstItem="cF2-Le-7mQ" firstAttribute="leading" secondItem="K9I-jD-KjA" secondAttribute="leading" constant="20" id="QjQ-IT-P6D"/>
                             <constraint firstItem="0gv-FP-bMW" firstAttribute="top" secondItem="cF2-Le-7mQ" secondAttribute="bottom" constant="10" id="Ufa-nv-VDB"/>
                             <constraint firstItem="6T0-xP-mIz" firstAttribute="top" secondItem="KV7-iq-cy2" secondAttribute="bottom" constant="10" id="fCJ-9T-AvX"/>
                             <constraint firstItem="0gv-FP-bMW" firstAttribute="leading" secondItem="K9I-jD-KjA" secondAttribute="leading" constant="20" id="fMU-ho-Dpl"/>
                             <constraint firstItem="KV7-iq-cy2" firstAttribute="top" secondItem="MOK-AF-XAz" secondAttribute="bottom" constant="40" id="l3A-An-SEC"/>
                             <constraint firstItem="MOK-AF-XAz" firstAttribute="centerX" secondItem="ZwX-cT-FIQ" secondAttribute="centerX" id="l5L-LB-QUJ"/>
+                            <constraint firstItem="K9I-jD-KjA" firstAttribute="bottom" secondItem="M2X-L9-2af" secondAttribute="bottom" constant="17" id="q6e-MH-B48"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K9I-jD-KjA"/>
                     </view>
                     <connections>
+                        <outlet property="checkMoreButton" destination="M2X-L9-2af" id="HVs-Vy-u87"/>
                         <outlet property="destinationLabel" destination="0gv-FP-bMW" id="HPE-Bs-Ec3"/>
                         <outlet property="detailsLabel" destination="UI7-EY-46U" id="5bd-U2-IAA"/>
                         <outlet property="imageView" destination="MOK-AF-XAz" id="zGq-UQ-yG3"/>
